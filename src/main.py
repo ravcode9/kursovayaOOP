@@ -16,12 +16,9 @@ def user_interaction():
     else:
         print("Неверный выбор API.")
         return
-
     json_saver = JSONSaver()
-
     search_query = input("Введите поисковый запрос: ")
     vacancies = job_api.get_vacancies(search_query)
-
     if not vacancies:
         print("Нет вакансий, соответствующих заданным критериям.")
         return
